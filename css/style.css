@@ -1,4 +1,33 @@
-* {
+*body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f0f11;
+    color: #ffffff;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+}
+
+a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.enter-btn {
+    text-align: center;
+    padding: 40px;
+    border: 1px solid #333;
+    border-radius: 16px;
+    background: #18181c;
+    display: block;
+}
+
+.logo-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
 }
