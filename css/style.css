@@ -1,9 +1,10 @@
-*body {
-    font-family: 'Segoe UI', sans-serif;
+*/* Style général */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0f0f11;
-    color: #ffffff;
+    color: #e0e0e0;
     margin: 0;
-    padding: 20px;
+    padding: 30px;
 }
 
 a {
@@ -11,23 +12,85 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Page d'accueil */
 .landing-page {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 90vh;
+    padding: 20px;
 }
 
-.enter-btn {
+.cover-container {
     text-align: center;
-    padding: 40px;
-    border: 1px solid #333;
-    border-radius: 16px;
+    max-width: 900px;
+}
+
+.cover-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Menu des 3 rubriques sur l'accueil */
+.home-menu {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-card {
     background: #18181c;
-    display: block;
+    border: 1px solid #2a2a30;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 220px;
+    color: #ffffff;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    border-color: #4da6ff;
+    text-decoration: none;
 }
 
 .logo-icon {
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
+}
+
+.menu-card h2 {
+    font-size: 1.3rem;
+    margin: 10px 0 5px 0;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+}
+
+/* Pages de contenu (Contact & À propos) */
+.info-page {
+    background: #18181c;
+    border: 1px solid #2a2a30;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.contact-list li {
+    margin-bottom: 20px;
 }
