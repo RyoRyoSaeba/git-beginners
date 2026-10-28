@@ -94,3 +94,42 @@ a:hover {
 .contact-list li {
     margin-bottom: 20px;
 }
+/* Animation tourne-page pour les transitions */
+body {
+    perspective: 1200px; /* Donne l'effet de profondeur 3D */
+    overflow-x: hidden;
+}
+
+/* Classe appliquée lors du chargement de la page */
+.page-turn-enter {
+    animation: turnIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: left center;
+}
+
+/* Classe appliquée juste avant de quitter la page */
+.page-turn-exit {
+    animation: turnOut 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform-origin: left center;
+}
+
+@keyframes turnIn {
+    from {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes turnOut {
+    from {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+    to {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+}
